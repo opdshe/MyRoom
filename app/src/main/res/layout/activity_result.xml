@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#A6F40303">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+    >
+        <TextView
+                android:id="@+id/txt_temp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Not yet"
+                android:textColor="#ffffff"
+                android:textSize="30dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btn_get"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

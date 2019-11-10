@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
 
                     // Log.e("UserProfile", userProfile.toString());
                     // Log.e("UserProfile", userProfile.getId() + "");
-                    Intent intent = new Intent(Login.this, Search.class);
+                    Intent intent = new Intent(Login.this, SearchActivity.class);
                     startActivity(intent);
 
                 }

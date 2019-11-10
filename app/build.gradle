@@ -39,6 +39,9 @@ dependencies {
     implementation 'com.naver.maps:map-sdk:3.6.0'
     //google_place
     implementation 'com.google.android.libraries.places:places:2.0.0'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+
 
 }

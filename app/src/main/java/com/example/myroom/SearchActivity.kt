@@ -1,6 +1,7 @@
 package com.example.myroom
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,7 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_sub.*
 
-class Search:AppCompatActivity(){
+class SearchActivity:AppCompatActivity(){
     var rush_hour:Int?=null
     var mode:String?=null
     var destination:String?=null
@@ -60,6 +61,8 @@ class Search:AppCompatActivity(){
         })
         btn_search.setOnClickListener { view ->
             Toast.makeText(applicationContext,destination,Toast.LENGTH_SHORT).show()
+            var intent=Intent(this,ResultActivity::class.java)
+            startActivity(intent)
         }
     }
 
