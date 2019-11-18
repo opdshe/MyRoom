@@ -13,7 +13,7 @@ import com.kakao.usermgmt.callback.MeV2ResponseCallback;
 import com.kakao.usermgmt.response.MeV2Response;
 import com.kakao.util.exception.KakaoException;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "";
     SessionCallback callback;
@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
 
                     // Log.e("UserProfile", userProfile.toString());
                     // Log.e("UserProfile", userProfile.getId() + "");
-                    Intent intent = new Intent(Login.this, SearchActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
                     startActivity(intent);
 
                 }

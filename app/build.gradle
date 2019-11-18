@@ -40,8 +40,16 @@ dependencies {
     //google_place
     implementation 'com.google.android.libraries.places:places:2.0.0'
     //retrofit
-    compile 'com.squareup.retrofit2:retrofit:2.4.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //mongodb
+    //implementation 'org.mongodb:mongodb-driver-sync:3.11.2'
+    implementation 'org.mongodb:mongo-java-driver:3.4.1'
+
+    implementation 'com.github.devlight.navigationtabstrip:navigationtabstrip:1.0.4'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
 
 
 }

@@ -1,11 +1,9 @@
 package com.example.myroom
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -60,8 +58,10 @@ class SearchActivity:AppCompatActivity(){
             }
         })
         btn_search.setOnClickListener { view ->
-            Toast.makeText(applicationContext,destination,Toast.LENGTH_SHORT).show()
             var intent=Intent(this,ResultActivity::class.java)
+            intent.putExtra("rushHour",rush_hour)
+            intent.putExtra("mode",mode)
+            intent.putExtra("destination",destination)
             startActivity(intent)
         }
     }
