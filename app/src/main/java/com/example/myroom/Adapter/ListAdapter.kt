@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
-import com.example.myroom.DetailActivity
 import com.example.myroom.R
 import com.example.myroom.Place_Item
 import com.example.myroom.ResultActivity

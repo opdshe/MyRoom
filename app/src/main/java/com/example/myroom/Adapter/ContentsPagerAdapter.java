@@ -7,22 +7,25 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import com.example.myroom.Fragment.Frag_Gyeonggi;
 import com.example.myroom.Fragment.Frag_Incheon;
 import com.example.myroom.Fragment.Frag_Seoul;
+import com.example.myroom.Fragment.Frag_Seoul_t;
 
 public class ContentsPagerAdapter extends FragmentStatePagerAdapter {
 
     private int mPageCount;
-    private String destination;
+    private String dest_address;
+    private String dest_keyword;
     private int rushHour;
 
 
 
-    public ContentsPagerAdapter(FragmentManager fm, int pageCount, String destination, int rushHour) {
+    public ContentsPagerAdapter(FragmentManager fm, int pageCount, String dest_keyword, String dest_address, int rushHour) {
 
         super(fm);
 
         this.mPageCount = pageCount;
-        this.destination =destination;
+        this.dest_address=dest_address;
         this.rushHour=rushHour;
+        this.dest_keyword=dest_keyword;
 
     }
 
@@ -36,20 +39,20 @@ public class ContentsPagerAdapter extends FragmentStatePagerAdapter {
 
             case 0:
 
-                Frag_Seoul seoulFrag = new Frag_Seoul(destination,rushHour);
+                Frag_Seoul_t seoulFrag = new Frag_Seoul_t(dest_keyword,dest_address,rushHour);
 
                 return seoulFrag;
 
             case 1:
 
-                Frag_Gyeonggi gyeonggiFrag = new Frag_Gyeonggi(destination,rushHour);
+                Frag_Gyeonggi gyeonggiFrag = new Frag_Gyeonggi(dest_keyword,dest_address,rushHour);
 
                 return gyeonggiFrag;
 
 
             case 2:
 
-                Frag_Incheon inchoenFrag = new Frag_Incheon(destination,rushHour);
+                Frag_Incheon inchoenFrag = new Frag_Incheon(dest_keyword,rushHour);
 
                 return inchoenFrag;
 

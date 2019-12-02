@@ -16,7 +16,9 @@ import com.gigamole.navigationtabstrip.NavigationTabStrip;
  * Created by GIGAMOLE on 28.03.2016.
  */
 public class ResultActivity extends AppCompatActivity {
-
+    private String dest_keyword;
+    private String dest_address;
+    private Integer rushHour;
     private ViewPager mViewPager;
     private NavigationTabStrip mTopNavigationTabStrip;
     private ContentsPagerAdapter mContentPagerAdapter;
@@ -26,17 +28,15 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         Intent intent=getIntent();
-        String destination=intent.getExtras().getString("destination");
-        Integer rushHour=intent.getExtras().getInt("rushHour");
-
-
+        dest_keyword=intent.getExtras().getString("dest_keyword");
+        dest_address=intent.getExtras().getString("dest_address");
+        rushHour=intent.getExtras().getInt("rushHour");
 
         initUI();
         setUI();
 
-        mContentPagerAdapter = new ContentsPagerAdapter( getSupportFragmentManager(), 3,destination,rushHour);
+        mContentPagerAdapter = new ContentsPagerAdapter( getSupportFragmentManager(), 3,dest_keyword,dest_address,rushHour);
         mViewPager.setAdapter(mContentPagerAdapter);
-
     }
 
     private void initUI() {

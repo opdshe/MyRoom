@@ -31,7 +31,7 @@ import java.io.File
 import java.util.Collections.list
 
 class Frag_Seoul(private val destination: String?, private val rushHour: Int) : Fragment() {
-    private var txt_from:String?=""
+
     private var PlaceList=ArrayList<Place_Item>()
     var Adapter: ListAdapter?=null
     private var rush:Int=0
@@ -50,7 +50,8 @@ class Frag_Seoul(private val destination: String?, private val rushHour: Int) : 
         var listView=view.findViewById(R.id.list_view) as ListView
         listView.setOnItemClickListener { adapterView, view, i, l ->
             var intent=Intent(context,DetailActivity::class.java)
-            intent.putExtra("destination",view.address.text)
+            intent.putExtra("source",view.address.text)
+            intent.putExtra("destination", destination)
             startActivity(intent)
         }
         var raw_data= resources.openRawResource(R.raw.seoul).bufferedReader().use { it.readText() }

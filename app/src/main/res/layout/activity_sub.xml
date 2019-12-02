@@ -4,7 +4,7 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#CC765E">
+              android:background="#ff7040">
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,6 +22,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 />
+        <ImageView
+                android:id="@+id/img_bookmark"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_title"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/bookmark1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,10 +121,10 @@
                 android:fontFamily="@font/righteous"
                 app:layout_constraintTop_toBottomOf="@id/linear"
                 app:layout_constraintStart_toStartOf="parent"/>
-        <EditText
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/edit_dest"
+                android:id="@+id/txt_dest"
                 android:layout_marginTop="20dp"
                 android:hint="직장명(목적지)을 입력해 주세요. "
                 android:textColorHint="#eeeeee"
@@ -122,6 +132,17 @@
                 android:textColor="#ffffff"
                 android:fontFamily="@font/righteous"
                 app:layout_constraintTop_toBottomOf="@id/txt_company"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_dest_d"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#eeeeee"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/righteous"
+                app:layout_constraintTop_toBottomOf="@id/txt_dest"
                 app:layout_constraintStart_toStartOf="parent"/>
         <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"

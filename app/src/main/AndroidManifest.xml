@@ -13,6 +13,7 @@
             android:name=".kakao.GlobalApplication"
             android:usesCleartextTraffic="true"
             >
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data
                 android:name="com.kakao.sdk.AppKey"
                 android:value="@string/kakao_app_key"/>
@@ -41,8 +42,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".BookmarkDetail"></activity>
+        <activity android:name=".BookmarkActivity"></activity>
         <activity android:name=".SearchActivity"></activity>
         <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".TestActivity"></activity>
         <activity android:name=".ResultActivity"></activity>
     </application>
 </manifest>
