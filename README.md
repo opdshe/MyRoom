@@ -37,7 +37,7 @@ screenshot
   <img width="300" height ="500" src="image/my_room_detail_page.jpg">
 </p>
 
-## 한계점
+## 3. 한계점
 - Google Direction API 요청 횟수 제한으로 인해 모든 지역에 대한  
   이동소요 시간 별 이동가능한 지역들을 저장할 수 없었다.  
   
