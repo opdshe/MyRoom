@@ -37,7 +37,16 @@ screenshot
   <img width="300" height ="500" src="image/my_room_detail_page.jpg">
 </p>
 
-## 3. 한계점
+## 3. 개발 환경
+- 서버 측 언어 : Python
+- 안드로이드 언어 : Java
+- 데이터 베이스 : MongoDB
+- 외부 API :
+  - 이동 소요 시간 확보 : Google Direction API
+  - 키워드를 통한 주소 검색 : Google API
+  - 주소를 통한 법정동 코드 확보 : 카카오 로컬 API
+
+## 4. 한계점
 - Google Direction API 요청 횟수 제한으로 인해 모든 지역에 대한  
   이동소요 시간 별 이동가능한 지역들을 저장할 수 없었다.  
   
